@@ -5,7 +5,7 @@ const Topic = require('./models/topic')
 const port = 1223
 const methodOverride = require('method-override')
 
-mongoose.connect('mongodb+srv://Liviu:sept2003@cluster--1.5nsas.mongodb.net/DailyBibl?retryWrites=true&w=majority', {
+mongoose.connect( process.env.DATABASE_URL || 'mongodb+srv://Liviu:sept2003@cluster--1.5nsas.mongodb.net/DailyBibl?retryWrites=true&w=majority', {
   useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
 })
 
